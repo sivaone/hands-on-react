@@ -1,4 +1,4 @@
-export default ({ member, handleClose }) => {
+export default ({ member, handleClose, handleNext, handlePrev }) => {
   return (
     <dialog id="modal-member" open>
       <article>
@@ -22,6 +22,10 @@ export default ({ member, handleClose }) => {
             </hgroup>
           </div>
         </hgroup>
+        <footer>
+          <a href="#prev" onClick={handlePrev} role="button">Prev</a>
+          <a href="#next" onClick={handleNext} role="button">Next</a>
+        </footer>
       </article>
     </dialog>
   )
